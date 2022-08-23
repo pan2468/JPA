@@ -39,10 +39,16 @@ public Member find(String memberId)
 MemberDAO의 find() 메소드를 완성해서 회원을 조회하는 기능을 개발하기
 
 #### 1. 회원 조회용 SQL 작성한다.
+
+~~~
 SELECT MEMBER_ID, NAME FROM MEMBER M WHERE MEMBER_ID = ?
+~~~
 
 #### 2. JDBC API를 사용해서 SQL을 실행한다.
+
+~~~
 ResultSet rs = stmt.executeQuery(sql);
+~~~
 
 #### 3. 조회 결과를 Member 객체로 매핑한다.
 
@@ -55,5 +61,38 @@ member.setMemberId(memberId);
 member.setName(name);
 ~~~
 
+회원 등록 기능 진행
+
+#### 회원 등록 기능 추가
+
+~~~
+public class MemberDAO{
+
+public Member find(String memberId);
+public void save(Member member);
+
+}
+~~~
+
+#### 1. 회원 등록용 SQL 작성한다.
+
+~~~
+String sql = "INSERT INTO MEMBER(MEMBER_ID, NAME) VALUES(?,?)";
+~~~
+
+#### 2. 회원 객체의 값을 꺼내서 등록 SQL에 전달한다.
+
+~~~
+
+pstmt.setString(1, member.getMemberId());
+pstmt.setString(2, member.getName());
+
+~~~
+
+#### 3. JDBC API를 사용해서 SQL를 실행한다.
+
+~~~
+pstmt.executeUpdate(sql);
+~~~
 
 
