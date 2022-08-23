@@ -5,4 +5,4 @@ SI회사와 솔루션 회사 같은 경우는 스프링 프레임워크 영속�
 관계형 데이터베이스는 가장 대중적이고 신뢰할 만한 안전한 데이터의 저장소다. 그래서 자바로 개발하는 애플리케이션은 대부분 관계형 데이터베이스를 데이터 저장소로 사용한다.<br>
 데이터베이스에 데이터를 관리하려면 SQL을 사용해야 한다. 자바로 작성한 애플리케이션은 JDBC API를 사용해서 SQL을 데이터베이스에 전달한다.
 
-<img src="https://velog.velcdn.com/images%2Fyu-jin-song%2Fpost%2Fc0ea3b9a-51a5-45d3-a167-5a5a2fe3750d%2FJDBC_API%EC%99%80_SQL.png" width="300px" height="300px">
+<img src="https://velog.velcdn.com/images%2Fyu-jin-song%2Fpost%2Fc0ea3b9a-51a5-45d3-a167-5a5a2fe3750d%2FJDBC_API%EC%99%80_SQL.png" width="450px" height="300px">
