@@ -6,3 +6,20 @@ SI회사와 솔루션 회사 같은 경우는 스프링 프레임워크 영속�
 데이터베이스에 데이터를 관리하려면 SQL을 사용해야 한다. 자바로 작성한 애플리케이션은 JDBC API를 사용해서 SQL을 데이터베이스에 전달한다.
 
 <img src="https://velog.velcdn.com/images%2Fyu-jin-song%2Fpost%2Fc0ea3b9a-51a5-45d3-a167-5a5a2fe3750d%2FJDBC_API%EC%99%80_SQL.png" width="450px" height="300px">
+
+### 반복, 반복 그리고 반복
+반복적인 SQL 쿼리를 작성하여 직접 다룰때 문제점 알아보기
+
+#### 회원 객체
+~~~
+
+public class Member{
+
+private String memberId;
+private String name;
+
+}
+
+~~~
+
+
