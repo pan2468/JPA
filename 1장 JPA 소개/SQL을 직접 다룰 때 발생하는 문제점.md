@@ -22,4 +22,17 @@ private String name;
 
 ~~~
 
+👉 회원 객체를 데이터베이스에 저장하기 위해서 DAO 설정하기
+
+#### 회원용 DAO
+~~~
+
+public class MemberDAO{
+
+public Member find(String memberId)
+
+}
+
+~~~
+
 
