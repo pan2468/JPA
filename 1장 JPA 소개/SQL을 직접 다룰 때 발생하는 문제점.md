@@ -35,4 +35,24 @@ public Member find(String memberId)
 
 ~~~
 
+MemberDAO의 find() 메소드를 완성해서 회원을 조회하는 기능을 개발하기
+
+#### 1. 회원 조회용 SQL 작성한다.
+SELECT MEMBER_ID, NAME FROM MEMBER M WHERE MEMBER_ID = ?
+
+#### 2. JDBC API를 사용해서 SQL을 실행한다.
+ResultSet rs = stmt.executeQuery(sql);
+
+#### 3. 조회 결과를 Member 객체로 매핑한다.
+
+~~~
+String memberId = rs.getString("MEMBER_ID");
+String name = rs.getString("NAME");
+
+Member member = new Member();
+member.setMemberId(memberId);
+member.setName(name);
+~~~
+
+
 
