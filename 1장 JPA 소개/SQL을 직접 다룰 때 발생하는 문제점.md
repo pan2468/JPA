@@ -95,4 +95,55 @@ pstmt.setString(2, member.getName());
 pstmt.executeUpdate(sql);
 ~~~
 
+### SQL에 의존적인 개발
+
+#### 등록 코드 변경하기
+회원 테이블에 TEL 컬럼 추가하기 > 회원 객체 tel 필드를 추가
+
+~~~
+public class Member{
+
+private String memberId;
+private String name;
+private String tel; // 
+
+}
+~~~
+
+#### 연관된 객체
+
+~~~
+class Member{
+
+private String memberId;
+private String name;
+private String tel;
+private Team team; //추가
+
+}
+
+//추가된 팀
+class Team{
+
+private String teamName;
+
+}
+~~~
+
+코드를 실행해보니 member.getTeam()의 값이 항상 null이다. 회원과 연관된 팀이 없어서 그럴 것으로 생각하고 데이터베이스를 확인해보니 모든 회원이 팀에 소속되어 있다.
+
+#### MemberDAO에 추가된 findWithTeam()
+
+~~~
+public class MemberDAO{
+
+public Member find(String memberId);
+public Member findWithTeam(String memberId);
+
+}
+~~~
+
+
+
+
 
